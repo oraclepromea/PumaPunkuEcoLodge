@@ -1,0 +1,30 @@
+# Ignore system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ignore temporary files
+*.tmp
+*.temp
+~*
+
+# Ignore old bedroom files (not part of the main website)
+1 bedroom
+1 bedroom.html
+1 bedroom_files/
+3 bedroom.html
+3 bedroom.jpg
+3 bedroom_files/
+
+# Keep only the main website files
+# index.html
+# styles.css
+# script.js
+# image-fallbacks.css
+# README.md
+# images/
+# Main.jpg

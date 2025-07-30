@@ -1,0 +1,39 @@
+/* Placeholder styles for missing images */
+.hero {
+    background: linear-gradient(rgba(44, 85, 48, 0.8), rgba(26, 58, 29, 0.9)), 
+                linear-gradient(135deg, #2c5530 0%, #1a3a1d 50%, #d4af37 100%);
+}
+
+/* Fallback styles for missing images */
+.room-card img, .tour-card img, .about-image img, .restaurant-image img {
+    background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.room-card img::after, .tour-card img::after, .about-image img::after, .restaurant-image img::after {
+    content: 'Image Coming Soon';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo fallback */
+.logo {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.logo::after {
+    content: 'PP';
+}
