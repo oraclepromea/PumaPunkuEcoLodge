@@ -404,3 +404,167 @@ function createBackToTopButton() {
 
 // Initialize back to top button
 document.addEventListener('DOMContentLoaded', createBackToTopButton);
+
+// Restaurant Image Carousel
+document.addEventListener('DOMContentLoaded', function() {
+    const carouselImages = document.querySelectorAll('.carousel-image');
+    let currentImageIndex = 0;
+    
+    if (carouselImages.length > 0) {
+        function showNextImage() {
+            // Remove active class from current image
+            carouselImages[currentImageIndex].classList.remove('active');
+            
+            // Move to next image
+            currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+            
+            // Add active class to new current image
+            carouselImages[currentImageIndex].classList.add('active');
+        }
+        
+        // Start the carousel - change image every 3 seconds
+        setInterval(showNextImage, 3000);
+    }
+});
+
+// Language Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const elementsWithTranslations = document.querySelectorAll('[data-en][data-es]');
+    
+    // Get current language from localStorage or default to English
+    let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    
+    // Set initial language
+    setLanguage(currentLanguage);
+    
+    // Add click event listeners to language buttons
+    langButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const selectedLang = this.getAttribute('data-lang');
+            setLanguage(selectedLang);
+            
+            // Save language preference
+            localStorage.setItem('selectedLanguage', selectedLang);
+        });
+    });
+    
+    function setLanguage(language) {
+        currentLanguage = language;
+        
+        // Update all elements with translations
+        elementsWithTranslations.forEach(element => {
+            const translation = element.getAttribute(`data-${language}`);
+            if (translation) {
+                element.textContent = translation;
+            }
+        });
+        
+        // Update language button states
+        langButtons.forEach(btn => {
+            if (btn.getAttribute('data-lang') === language) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+        
+        // Update document language attribute
+        document.documentElement.lang = language;
+        
+        // Update WhatsApp message links based on language
+        updateWhatsAppLinks(language);
+        
+        // Update page title and meta description
+        updatePageMeta(language);
+    }
+    
+    function updateWhatsAppLinks(language) {
+        const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+        
+        const messages = {
+            en: {
+                general: "Hello! I'm interested in staying at Puma Punku Eco Lodge on Isla del Sol. Could you please provide me with availability and rates?",
+                standardRoom: "Hello! I'm interested in booking a Standard Room at Puma Punku Eco Lodge. Could you please check availability and rates?",
+                familyRoom: "Hello! I'm interested in booking a Family Room at Puma Punku Eco Lodge for my family. Could you please check availability and rates?",
+                suite: "Hello! I'm interested in booking the Suite at Puma Punku Eco Lodge. Could you please check availability and rates for your premium accommodation?",
+                ruinsTour: "Hello! I'm interested in booking the Ancient Ruins Tour at Puma Punku Eco Lodge. Could you please provide details about availability and pricing?",
+                culturalTour: "Hello! I'm interested in booking the Cultural Experience tour at Puma Punku Eco Lodge. Could you please provide details about availability and pricing?",
+                boatTour: "Hello! I'm interested in booking the Boat Tours at Puma Punku Eco Lodge. Could you please provide details about availability and pricing?",
+                booking: "Hello! I'm ready to book my stay at Puma Punku Eco Lodge on Isla del Sol. Could you please help me with availability and rates?"
+            },
+            es: {
+                general: "¡Hola! Estoy interesado en hospedarme en Puma Punku Eco Lodge en la Isla del Sol. ¿Podrían proporcionarme disponibilidad y tarifas?",
+                standardRoom: "¡Hola! Estoy interesado en reservar una Habitación Estándar en Puma Punku Eco Lodge. ¿Podrían verificar disponibilidad y tarifas?",
+                familyRoom: "¡Hola! Estoy interesado en reservar una Habitación Familiar en Puma Punku Eco Lodge para mi familia. ¿Podrían verificar disponibilidad y tarifas?",
+                suite: "¡Hola! Estoy interesado en reservar la Suite en Puma Punku Eco Lodge. ¿Podrían verificar disponibilidad y tarifas para su alojamiento premium?",
+                ruinsTour: "¡Hola! Estoy interesado en reservar el Tour de Ruinas Ancestrales en Puma Punku Eco Lodge. ¿Podrían proporcionar detalles sobre disponibilidad y precios?",
+                culturalTour: "¡Hola! Estoy interesado en reservar el tour de Experiencia Cultural en Puma Punku Eco Lodge. ¿Podrían proporcionar detalles sobre disponibilidad y precios?",
+                boatTour: "¡Hola! Estoy interesado en reservar los Tours en Bote en Puma Punku Eco Lodge. ¿Podrían proporcionar detalles sobre disponibilidad y precios?",
+                booking: "¡Hola! Estoy listo para reservar mi estadía en Puma Punku Eco Lodge en la Isla del Sol. ¿Podrían ayudarme con disponibilidad y tarifas?"
+            }
+        };
+        
+        whatsappLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            let messageType = 'general';
+            
+            // Determine message type based on link context
+            if (href.includes('Standard Room') || link.textContent.includes('Standard') || link.getAttribute('data-en')?.includes('Standard')) {
+                messageType = 'standardRoom';
+            } else if (href.includes('Family Room') || link.textContent.includes('Family') || link.getAttribute('data-en')?.includes('Family')) {
+                messageType = 'familyRoom';
+            } else if (href.includes('Suite') || link.textContent.includes('Suite') || link.getAttribute('data-en')?.includes('Suite')) {
+                messageType = 'suite';
+            } else if (href.includes('Ancient Ruins') || link.textContent.includes('Ruins') || link.getAttribute('data-en')?.includes('Ruins')) {
+                messageType = 'ruinsTour';
+            } else if (href.includes('Cultural Experience') || link.textContent.includes('Cultural') || link.getAttribute('data-en')?.includes('Cultural')) {
+                messageType = 'culturalTour';
+            } else if (href.includes('Boat Tours') || link.textContent.includes('Boat') || link.getAttribute('data-en')?.includes('Boat')) {
+                messageType = 'boatTour';
+            } else if (href.includes('ready to book') || link.textContent.includes('Book Your Stay') || link.getAttribute('data-en')?.includes('Book Your Stay')) {
+                messageType = 'booking';
+            }
+            
+            const newMessage = messages[language][messageType];
+            const newHref = `https://wa.me/59171944013?text=${encodeURIComponent(newMessage)}`;
+            link.setAttribute('href', newHref);
+        });
+    }
+    
+    function updatePageMeta(language) {
+        const titles = {
+            en: "Puma Punku Eco Lodge - Isla del Sol, Lake Titicaca, Bolivia",
+            es: "Puma Punku Eco Lodge - Isla del Sol, Lago Titicaca, Bolivia"
+        };
+        
+        const descriptions = {
+            en: "Experience authentic Bolivian hospitality at Puma Punku Eco Lodge on Isla del Sol, Lake Titicaca. Offering tours, traditional cuisine, and comfortable lodging.",
+            es: "Experimenta la auténtica hospitalidad boliviana en Puma Punku Eco Lodge en la Isla del Sol, Lago Titicaca. Ofrecemos tours, cocina tradicional y alojamiento cómodo."
+        };
+        
+        document.title = titles[language];
+        
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', descriptions[language]);
+        }
+    }
+    
+    // Add smooth transition effect for language changes
+    function addLanguageTransition() {
+        const style = document.createElement('style');
+        style.textContent = `
+            [data-en], [data-es] {
+                transition: opacity 0.3s ease;
+            }
+            
+            .language-switching {
+                opacity: 0.7;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    addLanguageTransition();
+});

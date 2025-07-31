@@ -5,10 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puma Punku Eco Lodge - Isla del Sol, Lake Titicaca, Bolivia</title>
     <meta name="description" content="Experience authentic Bolivian hospitality at Puma Punku Eco Lodge on Isla del Sol, Lake Titicaca. Offering tours, traditional cuisine, and comfortable lodging.">
+    <meta name="keywords" content="Bolivia, Lake Titicaca, Isla del Sol, eco lodge, tours, accommodation, Aymara culture, sustainable tourism">
+    <meta name="author" content="Puma Punku Eco Lodge">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pumapunkuecolodge.com/">
+    <meta property="og:title" content="Puma Punku Eco Lodge - Authentic Bolivia Experience">
+    <meta property="og:description" content="Experience authentic Bolivian hospitality at Puma Punku Eco Lodge on Isla del Sol, Lake Titicaca. Offering tours, traditional cuisine, and comfortable lodging.">
+    <meta property="og:image" content="images/Main.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pumapunkuecolodge.com/">
+    <meta property="twitter:title" content="Puma Punku Eco Lodge - Authentic Bolivia Experience">
+    <meta property="twitter:description" content="Experience authentic Bolivian hospitality at Puma Punku Eco Lodge on Isla del Sol, Lake Titicaca.">
+    <meta property="twitter:image" content="images/Main.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="images/Main.jpg" as="image">
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="image-fallbacks.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Puma Punku Eco Lodge",
+      "description": "Experience authentic Bolivian hospitality at Puma Punku Eco Lodge on Isla del Sol, Lake Titicaca.",
+      "image": "images/Main.jpg",
+      "telephone": "+591 71944013",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Isla del Sol, Comunidad Yumani",
+        "addressLocality": "Comunidad Yumani",
+        "addressRegion": "La Paz",
+        "addressCountry": "Bolivia"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-16.0275",
+        "longitude": "-69.1746"
+      },
+      "url": "https://pumapunkuecolodge.com",
+      "priceRange": "$$",
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "WiFi"},
+        {"@type": "LocationFeatureSpecification", "name": "Restaurant"},
+        {"@type": "LocationFeatureSpecification", "name": "Tour Services"},
+        {"@type": "LocationFeatureSpecification", "name": "Lake Views"}
+      ],
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4.5"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -18,12 +79,22 @@
                 <img src="images/logo.png" alt="Puma Punku Eco Lodge" class="logo">
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#accommodations" class="nav-link">Accommodations</a>
-                <a href="#tours" class="nav-link">Tours</a>
-                <a href="#restaurant" class="nav-link">Restaurant</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#home" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="#about" class="nav-link" data-en="About" data-es="Acerca">About</a>
+                <a href="#accommodations" class="nav-link" data-en="Accommodations" data-es="Alojamiento">Accommodations</a>
+                <a href="#tours" class="nav-link" data-en="Tours" data-es="Tours">Tours</a>
+                <a href="#restaurant" class="nav-link" data-en="Restaurant" data-es="Restaurante">Restaurant</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="en" title="English">
+                        <span class="flag-icon">🇺🇸</span>
+                        <span class="lang-text">EN</span>
+                    </button>
+                    <button class="lang-btn" data-lang="es" title="Español">
+                        <span class="flag-icon">🇪🇸</span>
+                        <span class="lang-text">ES</span>
+                    </button>
+                </div>
             </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -36,12 +107,12 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Welcome to Puma Punku Eco Lodge</h1>
-            <p class="hero-subtitle">Experience the magic of Isla del Sol on Lake Titicaca, Bolivia</p>
-            <p class="hero-description">Discover authentic Bolivian culture, breathtaking landscapes, and sustainable tourism at the world's highest navigable lake.</p>
+            <h1 class="hero-title" data-en="Welcome to Puma Punku Eco Lodge" data-es="Bienvenidos a Puma Punku Eco Lodge">Welcome to Puma Punku Eco Lodge</h1>
+            <p class="hero-subtitle" data-en="Experience the magic of Isla del Sol on Lake Titicaca, Bolivia" data-es="Experimenta la magia de la Isla del Sol en el Lago Titicaca, Bolivia">Experience the magic of Isla del Sol on Lake Titicaca, Bolivia</p>
+            <p class="hero-description" data-en="Discover authentic Bolivian culture, breathtaking landscapes, and sustainable tourism at the world's highest navigable lake." data-es="Descubre la auténtica cultura boliviana, paisajes impresionantes y turismo sostenible en el lago navegable más alto del mundo.">Discover authentic Bolivian culture, breathtaking landscapes, and sustainable tourism at the world's highest navigable lake.</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/59171944013?text=Hello! I'm interested in staying at Puma Punku Eco Lodge on Isla del Sol. Could you please provide me with availability and rates?" class="btn btn-primary">Book via WhatsApp</a>
-                <a href="#tours" class="btn btn-secondary">Explore Tours</a>
+                <a href="https://wa.me/59171944013?text=Hello! I'm interested in staying at Puma Punku Eco Lodge on Isla del Sol. Could you please provide me with availability and rates?" class="btn btn-primary" data-en="Book via WhatsApp" data-es="Reservar vía WhatsApp">Book via WhatsApp</a>
+                <a href="#tours" class="btn btn-secondary" data-en="Explore Tours" data-es="Explorar Tours">Explore Tours</a>
             </div>
         </div>
         <div class="hero-background">
@@ -53,29 +124,29 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2>About Puma Punku Eco Lodge</h2>
-                <p>Nestled on the mystical Isla del Sol, our eco-lodge offers an authentic Bolivian experience</p>
+                <h2 data-en="About Puma Punku Eco Lodge" data-es="Acerca de Puma Punku Eco Lodge">About Puma Punku Eco Lodge</h2>
+                <p data-en="Nestled on the mystical Isla del Sol, our eco-lodge offers an authentic Bolivian experience" data-es="Ubicado en la mística Isla del Sol, nuestro eco-lodge ofrece una auténtica experiencia boliviana">Nestled on the mystical Isla del Sol, our eco-lodge offers an authentic Bolivian experience</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Your Gateway to Ancient Bolivia</h3>
-                    <p>Located on the sacred Isla del Sol (Island of the Sun) in Lake Titicaca, Puma Punku Eco Lodge is your perfect base for exploring one of South America's most mystical destinations. Our lodge combines traditional Bolivian hospitality with modern comfort, offering guests an unforgettable experience at 3,812 meters above sea level.</p>
+                    <h3 data-en="Your Gateway to Ancient Bolivia" data-es="Tu Puerta de Entrada a la Bolivia Ancestral">Your Gateway to Ancient Bolivia</h3>
+                    <p data-en="Located on the sacred Isla del Sol (Island of the Sun) in Lake Titicaca, Puma Punku Eco Lodge is your perfect base for exploring one of South America's most mystical destinations. Our lodge combines traditional Bolivian hospitality with modern comfort, offering guests an unforgettable experience at 3,812 meters above sea level." data-es="Ubicado en la sagrada Isla del Sol en el Lago Titicaca, Puma Punku Eco Lodge es tu base perfecta para explorar uno de los destinos más místicos de Sudamérica. Nuestro lodge combina la hospitalidad tradicional boliviana con el confort moderno, ofreciendo a los huéspedes una experiencia inolvidable a 3,812 metros sobre el nivel del mar.">Located on the sacred Isla del Sol (Island of the Sun) in Lake Titicaca, Puma Punku Eco Lodge is your perfect base for exploring one of South America's most mystical destinations. Our lodge combines traditional Bolivian hospitality with modern comfort, offering guests an unforgettable experience at 3,812 meters above sea level.</p>
                     
                     <div class="features">
                         <div class="feature">
                             <i class="fas fa-leaf"></i>
-                            <h4>Eco-Friendly</h4>
-                            <p>Sustainable practices protecting Lake Titicaca's pristine environment</p>
+                            <h4 data-en="Eco-Friendly" data-es="Eco-Amigable">Eco-Friendly</h4>
+                            <p data-en="Sustainable practices protecting Lake Titicaca's pristine environment" data-es="Prácticas sostenibles que protegen el entorno prístino del Lago Titicaca">Sustainable practices protecting Lake Titicaca's pristine environment</p>
                         </div>
                         <div class="feature">
                             <i class="fas fa-mountain"></i>
-                            <h4>Authentic Experience</h4>
-                            <p>Immerse yourself in local Aymara culture and traditions</p>
+                            <h4 data-en="Authentic Experience" data-es="Experiencia Auténtica">Authentic Experience</h4>
+                            <p data-en="Immerse yourself in local Aymara culture and traditions" data-es="Sumérgete en la cultura y tradiciones locales Aymara">Immerse yourself in local Aymara culture and traditions</p>
                         </div>
                         <div class="feature">
                             <i class="fas fa-heart"></i>
-                            <h4>Warm Hospitality</h4>
-                            <p>Genuine Bolivian warmth and personalized service</p>
+                            <h4 data-en="Warm Hospitality" data-es="Hospitalidad Cálida">Warm Hospitality</h4>
+                            <p data-en="Genuine Bolivian warmth and personalized service" data-es="Calidez boliviana genuina y servicio personalizado">Genuine Bolivian warmth and personalized service</p>
                         </div>
                     </div>
                 </div>
@@ -90,50 +161,50 @@
     <section id="accommodations" class="accommodations">
         <div class="container">
             <div class="section-header">
-                <h2>Comfortable Accommodations</h2>
-                <p>Rest comfortably after your Lake Titicaca adventures</p>
+                <h2 data-en="Comfortable Accommodations" data-es="Alojamientos Cómodos">Comfortable Accommodations</h2>
+                <p data-en="Rest comfortably after your Lake Titicaca adventures" data-es="Descansa cómodamente después de tus aventuras en el Lago Titicaca">Rest comfortably after your Lake Titicaca adventures</p>
             </div>
             <div class="rooms-grid">
                 <div class="room-card">
                     <img src="images/1 bed room with view.jpeg" alt="Standard Room">
                     <div class="room-content">
-                        <h3>Standard Room</h3>
-                        <p>Cozy rooms with traditional decor and lake views. Perfect for couples or solo travelers.</p>
+                        <h3 data-en="Standard Room" data-es="Habitación Estándar">Standard Room</h3>
+                        <p data-en="Cozy rooms with traditional decor and lake views. Perfect for couples or solo travelers." data-es="Habitaciones acogedoras con decoración tradicional y vistas al lago. Perfectas para parejas o viajeros solos.">Cozy rooms with traditional decor and lake views. Perfect for couples or solo travelers.</p>
                         <ul class="amenities">
-                            <li><i class="fas fa-bed"></i> Comfortable bedding</li>
-                            <li><i class="fas fa-mountain"></i> Lake views</li>
-                            <li><i class="fas fa-wifi"></i> WiFi available</li>
-                            <li><i class="fas fa-shower"></i> Private bathroom</li>
+                            <li><i class="fas fa-bed"></i> <span data-en="Comfortable bedding" data-es="Ropa de cama cómoda">Comfortable bedding</span></li>
+                            <li><i class="fas fa-mountain"></i> <span data-en="Lake views" data-es="Vistas al lago">Lake views</span></li>
+                            <li><i class="fas fa-wifi"></i> <span data-en="WiFi available" data-es="WiFi disponible">WiFi available</span></li>
+                            <li><i class="fas fa-shower"></i> <span data-en="Private bathroom" data-es="Baño privado">Private bathroom</span></li>
                         </ul>
-                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking a Standard Room at Puma Punku Eco Lodge. Could you please check availability and rates?" class="btn btn-primary" style="margin-top: 1rem; display: block; text-align: center;">Book Standard Room</a>
+                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking a Standard Room at Puma Punku Eco Lodge. Could you please check availability and rates?" class="btn btn-primary" style="margin-top: 1rem; display: block; text-align: center;" data-en="Book Standard Room" data-es="Reservar Habitación Estándar">Book Standard Room</a>
                     </div>
                 </div>
                 <div class="room-card">
                     <img src="images/2 bed room.jpeg" alt="Family Room">
                     <div class="room-content">
-                        <h3>Family Room</h3>
-                        <p>Spacious accommodations for families, featuring multiple beds and extra space.</p>
+                        <h3 data-en="Family Room" data-es="Habitación Familiar">Family Room</h3>
+                        <p data-en="Spacious accommodations perfect for families and groups, featuring multiple beds and ample space to relax together." data-es="Alojamientos espaciosos perfectos para familias y grupos, con múltiples camas y amplio espacio para relajarse juntos.">Spacious accommodations perfect for families and groups, featuring multiple beds and ample space to relax together.</p>
                         <ul class="amenities">
-                            <li><i class="fas fa-users"></i> Sleeps 4-6 people</li>
-                            <li><i class="fas fa-mountain"></i> Panoramic views</li>
-                            <li><i class="fas fa-coffee"></i> Tea/coffee facilities</li>
-                            <li><i class="fas fa-thermometer-half"></i> Heating available</li>
+                            <li><i class="fas fa-users"></i> <span data-en="Sleeps 4-6 people" data-es="Para 4-6 personas">Sleeps 4-6 people</span></li>
+                            <li><i class="fas fa-mountain"></i> <span data-en="Panoramic views" data-es="Vistas panorámicas">Panoramic views</span></li>
+                            <li><i class="fas fa-coffee"></i> <span data-en="Tea/coffee facilities" data-es="Facilidades de té/café">Tea/coffee facilities</span></li>
+                            <li><i class="fas fa-thermometer-half"></i> <span data-en="Heating available" data-es="Calefacción disponible">Heating available</span></li>
                         </ul>
-                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking a Family Room at Puma Punku Eco Lodge for my family. Could you please check availability and rates?" class="btn btn-primary" style="margin-top: 1rem; display: block; text-align: center;">Book Family Room</a>
+                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking a Family Room at Puma Punku Eco Lodge for my family. Could you please check availability and rates?" class="btn btn-primary" style="margin-top: 1rem; display: block; text-align: center;" data-en="Book Family Room" data-es="Reservar Habitación Familiar">Book Family Room</a>
                     </div>
                 </div>
                 <div class="room-card">
                     <img src="images/3 bedroom.jpeg" alt="Suite">
                     <div class="room-content">
-                        <h3>Suite</h3>
-                        <p>Our premium accommodation with separate living area and the best lake views.</p>
+                        <h3 data-en="Suite" data-es="Suite">Suite</h3>
+                        <p data-en="Our premium accommodation with separate living area and the best lake views." data-es="Nuestro alojamiento premium con área de estar separada y las mejores vistas al lago.">Our premium accommodation with separate living area and the best lake views.</p>
                         <ul class="amenities">
-                            <li><i class="fas fa-crown"></i> Premium room</li>
-                            <li><i class="fas fa-couch"></i> Separate living area</li>
-                            <li><i class="fas fa-eye"></i> Best lake views</li>
-                            <li><i class="fas fa-concierge-bell"></i> Priority service</li>
+                            <li><i class="fas fa-crown"></i> <span data-en="Premium room" data-es="Habitación premium">Premium room</span></li>
+                            <li><i class="fas fa-couch"></i> <span data-en="Separate living area" data-es="Área de estar separada">Separate living area</span></li>
+                            <li><i class="fas fa-eye"></i> <span data-en="Best lake views" data-es="Mejores vistas al lago">Best lake views</span></li>
+                            <li><i class="fas fa-concierge-bell"></i> <span data-en="Priority service" data-es="Servicio prioritario">Priority service</span></li>
                         </ul>
-                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking the Suite at Puma Punku Eco Lodge. Could you please check availability and rates for your premium accommodation?" class="btn btn-primary" style="margin-top: 1rem; display: block; text-align: center;">Book Suite</a>
+                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking the Suite at Puma Punku Eco Lodge. Could you please check availability and rates for your premium accommodation?" class="btn btn-primary" style="margin-top: 1rem; display: block; text-align: center;" data-en="Book Suite" data-es="Reservar Suite">Book Suite</a>
                     </div>
                 </div>
             </div>
@@ -144,60 +215,47 @@
     <section id="tours" class="tours">
         <div class="container">
             <div class="section-header">
-                <h2>Unforgettable Tours</h2>
-                <p>Explore the mysteries and beauty of Isla del Sol</p>
+                <h2 data-en="Unforgettable Tours" data-es="Tours Inolvidables">Unforgettable Tours</h2>
+                <p data-en="Explore the mysteries and beauty of Isla del Sol" data-es="Explora los misterios y la belleza de la Isla del Sol">Explore the mysteries and beauty of Isla del Sol</p>
             </div>
             <div class="tours-grid">
                 <div class="tour-card">
-                    <img src="images/ruins-tour.jpg" alt="Ancient Ruins Tour">
+                    <img src="images/isla-del-sol-temple-of-the-sun.jpg" alt="Ancient Ruins Tour">
                     <div class="tour-content">
-                        <h3>Ancient Ruins Tour</h3>
-                        <p>Discover the sacred sites where the Inca civilization believed the sun was born. Visit ancient temples and archaeological sites.</p>
+                        <h3 data-en="Ancient Ruins Tour" data-es="Tour de Ruinas Ancestrales">Ancient Ruins Tour</h3>
+                        <p data-en="Discover the sacred sites where the Inca civilization believed the sun was born. Visit ancient temples and archaeological sites." data-es="Descubre los sitios sagrados donde la civilización Inca creía que nació el sol. Visita templos antiguos y sitios arqueológicos.">Discover the sacred sites where the Inca civilization believed the sun was born. Visit ancient temples and archaeological sites.</p>
                         <div class="tour-details">
-                            <span><i class="fas fa-clock"></i> 4-6 hours</span>
-                            <span><i class="fas fa-users"></i> Small groups</span>
-                            <span><i class="fas fa-hiking"></i> Moderate hiking</span>
+                            <span><i class="fas fa-clock"></i> <span data-en="4-6 hours" data-es="4-6 horas">4-6 hours</span></span>
+                            <span><i class="fas fa-users"></i> <span data-en="Small groups" data-es="Grupos pequeños">Small groups</span></span>
+                            <span><i class="fas fa-hiking"></i> <span data-en="Moderate hiking" data-es="Caminata moderada">Moderate hiking</span></span>
                         </div>
-                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking the Ancient Ruins Tour at Puma Punku Eco Lodge. Could you please provide details about availability and pricing?" class="btn btn-secondary" style="margin-top: 1rem; display: block; text-align: center;">Book Ruins Tour</a>
+                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking the Ancient Ruins Tour at Puma Punku Eco Lodge. Could you please provide details about availability and pricing?" class="btn btn-secondary" style="margin-top: 1rem; display: block; text-align: center;" data-en="Book Ruins Tour" data-es="Reservar Tour de Ruinas">Book Ruins Tour</a>
                     </div>
                 </div>
                 <div class="tour-card">
-                    <img src="images/cultural-tour.jpg" alt="Cultural Experience">
+                    <img src="images/Cultural Tradition.jpeg" alt="Cultural Experience">
                     <div class="tour-content">
-                        <h3>Cultural Experience</h3>
-                        <p>Meet local Aymara families, learn traditional crafts, and understand the island's living culture and traditions.</p>
+                        <h3 data-en="Cultural Experience" data-es="Experiencia Cultural">Cultural Experience</h3>
+                        <p data-en="Meet local Aymara families, learn traditional crafts, and understand the island's living culture and traditions." data-es="Conoce a familias Aymara locales, aprende artesanías tradicionales y comprende la cultura viva y tradiciones de la isla.">Meet local Aymara families, learn traditional crafts, and understand the island's living culture and traditions.</p>
                         <div class="tour-details">
-                            <span><i class="fas fa-clock"></i> 3-4 hours</span>
-                            <span><i class="fas fa-heart"></i> Cultural immersion</span>
-                            <span><i class="fas fa-hands"></i> Hands-on activities</span>
+                            <span><i class="fas fa-clock"></i> <span data-en="3-4 hours" data-es="3-4 horas">3-4 hours</span></span>
+                            <span><i class="fas fa-heart"></i> <span data-en="Cultural immersion" data-es="Inmersión cultural">Cultural immersion</span></span>
+                            <span><i class="fas fa-hands"></i> <span data-en="Hands-on activities" data-es="Actividades prácticas">Hands-on activities</span></span>
                         </div>
-                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking the Cultural Experience tour at Puma Punku Eco Lodge. Could you please provide details about availability and pricing?" class="btn btn-secondary" style="margin-top: 1rem; display: block; text-align: center;">Book Cultural Tour</a>
+                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking the Cultural Experience tour at Puma Punku Eco Lodge. Could you please provide details about availability and pricing?" class="btn btn-secondary" style="margin-top: 1rem; display: block; text-align: center;" data-en="Book Cultural Tour" data-es="Reservar Tour Cultural">Book Cultural Tour</a>
                     </div>
                 </div>
                 <div class="tour-card">
-                    <img src="images/sunset-tour.jpg" alt="Sunset Tour">
+                    <img src="images/Boat Tours.jpeg" alt="Boat Tours">
                     <div class="tour-content">
-                        <h3>Sunset & Stargazing</h3>
-                        <p>Experience breathtaking sunsets over Lake Titicaca and enjoy stargazing at one of the world's clearest skies.</p>
+                        <h3 data-en="Boat Tours" data-es="Tours en Bote">Boat Tours</h3>
+                        <p data-en="Explore the pristine waters of Lake Titicaca aboard our comfortable boats. Enjoy scenic views and visit remote parts of the island accessible only by water." data-es="Explora las aguas prístinas del Lago Titicaca a bordo de nuestros botes cómodos. Disfruta vistas panorámicas y visita partes remotas de la isla accesibles solo por agua.">Explore the pristine waters of Lake Titicaca aboard our comfortable boats. Enjoy scenic views and visit remote parts of the island accessible only by water.</p>
                         <div class="tour-details">
-                            <span><i class="fas fa-clock"></i> 2-3 hours</span>
-                            <span><i class="fas fa-star"></i> Evening tour</span>
-                            <span><i class="fas fa-camera"></i> Photography</span>
+                            <span><i class="fas fa-clock"></i> <span data-en="2-4 hours" data-es="2-4 horas">2-4 hours</span></span>
+                            <span><i class="fas fa-ship"></i> <span data-en="Boat excursion" data-es="Excursión en bote">Boat excursion</span></span>
+                            <span><i class="fas fa-camera"></i> <span data-en="Scenic views" data-es="Vistas panorámicas">Scenic views</span></span>
                         </div>
-                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking the Sunset & Stargazing tour at Puma Punku Eco Lodge. Could you please provide details about availability and pricing?" class="btn btn-secondary" style="margin-top: 1rem; display: block; text-align: center;">Book Sunset Tour</a>
-                    </div>
-                </div>
-                <div class="tour-card">
-                    <img src="images/hiking-tour.jpg" alt="Island Hiking">
-                    <div class="tour-content">
-                        <h3>Island Hiking Adventure</h3>
-                        <p>Trek across the island's stunning landscapes, from ancient terraces to dramatic viewpoints overlooking the lake.</p>
-                        <div class="tour-details">
-                            <span><i class="fas fa-clock"></i> Full day</span>
-                            <span><i class="fas fa-mountain"></i> Challenging</span>
-                            <span><i class="fas fa-eye"></i> Scenic views</span>
-                        </div>
-                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking the Island Hiking Adventure tour at Puma Punku Eco Lodge. Could you please provide details about availability and pricing?" class="btn btn-secondary" style="margin-top: 1rem; display: block; text-align: center;">Book Hiking Tour</a>
+                        <a href="https://wa.me/59171944013?text=Hello! I'm interested in booking the Boat Tours at Puma Punku Eco Lodge. Could you please provide details about availability and pricing?" class="btn btn-secondary" style="margin-top: 1rem; display: block; text-align: center;" data-en="Book Boat Tour" data-es="Reservar Tour en Bote">Book Boat Tour</a>
                     </div>
                 </div>
             </div>
@@ -208,54 +266,168 @@
     <section id="restaurant" class="restaurant">
         <div class="container">
             <div class="section-header">
-                <h2>Traditional Bolivian Cuisine</h2>
-                <p>Savor authentic flavors with our three-course meals</p>
+                <h2 data-en="Traditional Bolivian Cuisine" data-es="Cocina Tradicional Boliviana">Traditional Bolivian Cuisine</h2>
+                <p data-en="Savor authentic flavors with our three-course meals" data-es="Saborea sabores auténticos con nuestras comidas de tres platos">Savor authentic flavors with our three-course meals</p>
             </div>
             <div class="restaurant-content">
                 <div class="restaurant-text">
-                    <h3>Farm-to-Table Dining Experience</h3>
-                    <p>Our restaurant serves traditional Bolivian cuisine using fresh, local ingredients. Enjoy hearty three-course meals featuring regional specialties and time-honored recipes passed down through generations.</p>
+                    <h3 data-en="Farm-to-Table Dining Experience" data-es="Experiencia Gastronómica de la Granja a la Mesa">Farm-to-Table Dining Experience</h3>
+                    <p data-en="Our restaurant serves traditional Bolivian cuisine using fresh, local ingredients. Enjoy hearty three-course meals featuring regional specialties and time-honored recipes passed down through generations." data-es="Nuestro restaurante sirve cocina tradicional boliviana usando ingredientes frescos y locales. Disfruta comidas abundantes de tres platos con especialidades regionales y recetas tradicionales transmitidas por generaciones.">Our restaurant serves traditional Bolivian cuisine using fresh, local ingredients. Enjoy hearty three-course meals featuring regional specialties and time-honored recipes passed down through generations.</p>
                     
                     <div class="menu-highlights">
-                        <h4>Menu Highlights</h4>
+                        <h4 data-en="Menu Highlights" data-es="Destacados del Menú">Menu Highlights</h4>
                         <div class="menu-items">
                             <div class="menu-item">
-                                <h5>Quinoa Soup</h5>
-                                <p>Traditional soup with locally-grown quinoa and fresh vegetables</p>
+                                <h5 data-en="Quinoa Soup" data-es="Sopa de Quinua">Quinoa Soup</h5>
+                                <p data-en="Traditional soup with locally-grown quinoa and fresh vegetables" data-es="Sopa tradicional con quinua cultivada localmente y vegetales frescos">Traditional soup with locally-grown quinoa and fresh vegetables</p>
                             </div>
                             <div class="menu-item">
-                                <h5>Lake Trout</h5>
-                                <p>Fresh trout from Lake Titicaca, grilled with local herbs</p>
+                                <h5 data-en="Lake Trout" data-es="Trucha del Lago">Lake Trout</h5>
+                                <p data-en="Fresh trout from Lake Titicaca, grilled with local herbs" data-es="Trucha fresca del Lago Titicaca, a la parrilla con hierbas locales">Fresh trout from Lake Titicaca, grilled with local herbs</p>
                             </div>
                             <div class="menu-item">
-                                <h5>Llama Steak</h5>
-                                <p>Tender llama meat prepared with traditional Andean spices</p>
+                                <h5 data-en="Llama Steak" data-es="Carne de Llama">Llama Steak</h5>
+                                <p data-en="Tender llama meat prepared with traditional Andean spices" data-es="Carne tierna de llama preparada con especias tradicionales andinas">Tender llama meat prepared with traditional Andean spices</p>
                             </div>
                             <div class="menu-item">
-                                <h5>Api Morado</h5>
-                                <p>Traditional purple corn drink, perfect for the altitude</p>
+                                <h5 data-en="Api Morado" data-es="Api Morado">Api Morado</h5>
+                                <p data-en="Traditional purple corn drink, perfect for the altitude" data-es="Bebida tradicional de maíz morado, perfecta para la altitud">Traditional purple corn drink, perfect for the altitude</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="dining-info">
                         <div class="info-item">
-                            <i class="fas fa-utensils"></i>
-                            <span>Three-course meals included with stay</span>
-                        </div>
-                        <div class="info-item">
                             <i class="fas fa-leaf"></i>
-                            <span>Vegetarian and dietary options available</span>
+                            <span data-en="Vegetarian and dietary options available" data-es="Opciones vegetarianas y dietéticas disponibles">Vegetarian and dietary options available</span>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-clock"></i>
-                            <span>Breakfast: 7-9 AM | Lunch: 12-2 PM | Dinner: 6-8 PM</span>
+                            <span data-en="Breakfast: 7-9 AM | Lunch: 12-2 PM | Dinner: 6-8 PM" data-es="Desayuno: 7-9 AM | Almuerzo: 12-2 PM | Cena: 6-8 PM">Breakfast: 7-9 AM | Lunch: 12-2 PM | Dinner: 6-8 PM</span>
                         </div>
                     </div>
                 </div>
                 <div class="restaurant-image">
-                    <img src="images/restaurant.jpg" alt="Restaurant Interior">
+                    <div class="image-carousel" style="position: relative; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); height: 100%; min-height: 400px;">
+                        <img src="images/buffet-style-lunch-outdoors.jpg" alt="Restaurant - Buffet Style Lunch Outdoors" class="carousel-image active">
+                        <img src="images/Local team with lodge.jpeg" alt="Restaurant - Local Team with Lodge" class="carousel-image">
+                        <img src="images/Screenshot 2025-07-30 at 2.18.57 PM.jpeg" alt="Restaurant - Traditional Meal Service" class="carousel-image">
+                        <img src="images/Screenshot 2025-07-30 at 2.23.30 PM.jpeg" alt="Restaurant - Local Cuisine" class="carousel-image">
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="What Our Guests Say" data-es="Lo Que Dicen Nuestros Huéspedes">What Our Guests Say</h2>
+                <p data-en="Real experiences from travelers who stayed with us" data-es="Experiencias reales de viajeros que se hospedaron con nosotros">Real experiences from travelers who stayed with us</p>
+            </div>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-en="Perfect location on Isla del sol, dinner provided if you ask for it, also wifi available in the dinner room. The family runs the hotel who are very friendly and also have cute pets." data-es="Ubicación perfecta en la Isla del Sol, cena proporcionada si la solicitas, también wifi disponible en el comedor. La familia administra el hotel, son muy amables y también tienen mascotas adorables.">"Perfect location on Isla del sol, dinner provided if you ask for it, also wifi available in the dinner room. The family runs the hotel who are very friendly and also have cute pets."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h5>Tom Verbeeck</h5>
+                            <span data-en="Verified Guest" data-es="Huésped Verificado">Verified Guest</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-en="The place is amazing. The family that attends you has a lot of energy and are all very friendly. I just received there the year and they prepared a beautiful ceremony. They also helped me with my son who was with stomach pains. The rooms are spacious, with new mattresses and a wonderful view." data-es="El lugar es increíble. La familia que te atiende tiene mucha energía y todos son muy amables. Recién llegué allí este año y prepararon una hermosa ceremonia. También me ayudaron con mi hijo que tenía dolores de estómago. Las habitaciones son espaciosas, con colchones nuevos y una vista maravillosa.">"The place is amazing. The family that attends you has a lot of energy and are all very friendly. I just received there the year and they prepared a beautiful ceremony. They also helped me with my son who was with stomach pains. The rooms are spacious, with new mattresses and a wonderful view."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h5>Vir C</h5>
+                            <span data-en="Verified Guest" data-es="Huésped Verificado">Verified Guest</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-en="We spent 3 days in this Hotel. Javier and Irene were really kind with us. Breakfast, lunch and dinner were really good. The view from the hotel is beautiful. We really enjoyed our peaceful stay." data-es="Pasamos 3 días en este hotel. Javier e Irene fueron realmente amables con nosotros. El desayuno, almuerzo y cena estuvieron muy buenos. La vista desde el hotel es hermosa. Realmente disfrutamos nuestra estancia tranquila.">"We spent 3 days in this Hotel. Javier and Irene were really kind with us. Breakfast, lunch and dinner were really good. The view from the hotel is beautiful. We really enjoyed our peaceful stay."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h5>Thomas Guerin</h5>
+                            <span data-en="Verified Guest" data-es="Huésped Verificado">Verified Guest</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">3,812m</span>
+                    <div class="stat-label" data-en="Altitude Above Sea Level" data-es="Altitud Sobre el Nivel del Mar">Altitude Above Sea Level</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <div class="stat-label" data-en="Happy Guests Annually" data-es="Huéspedes Felices Anualmente">Happy Guests Annually</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <div class="stat-label" data-en="Years of Experience" data-es="Años de Experiencia">Years of Experience</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <div class="stat-label" data-en="Eco-Friendly Practices" data-es="Prácticas Eco-Amigables">Eco-Friendly Practices</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-en="Ready for Your Isla del Sol Adventure?" data-es="¿Listo para tu Aventura en la Isla del Sol?">Ready for Your Isla del Sol Adventure?</h2>
+                <p data-en="Experience the magic of Lake Titicaca and immerse yourself in authentic Bolivian culture" data-es="Experimenta la magia del Lago Titicaca y sumérgete en la auténtica cultura boliviana">Experience the magic of Lake Titicaca and immerse yourself in authentic Bolivian culture</p>
+                <div class="professional-badges">
+                    <div class="badge">
+                        <i class="fas fa-leaf"></i>
+                        <span data-en="Eco-Certified" data-es="Eco-Certificado">Eco-Certified</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span data-en="Safe & Secure" data-es="Seguro y Protegido">Safe & Secure</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-award"></i>
+                        <span data-en="Local Owned" data-es="De Propietario Local">Local Owned</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-heart"></i>
+                        <span data-en="Family Friendly" data-es="Amigable para Familias">Family Friendly</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/59171944013?text=Hello! I'm ready to book my stay at Puma Punku Eco Lodge on Isla del Sol. Could you please help me with availability and rates?" class="btn btn-primary" data-en="Book Your Stay Now" data-es="Reserva tu Estadía Ahora">Book Your Stay Now</a>
             </div>
         </div>
     </section>
@@ -264,40 +436,84 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Contact & Location</h2>
-                <p>Plan your visit to Isla del Sol</p>
+                <h2 data-en="Contact & Location" data-es="Contacto y Ubicación">Contact & Location</h2>
+                <p data-en="Plan your visit to Isla del Sol" data-es="Planifica tu visita a la Isla del Sol">Plan your visit to Isla del Sol</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-card">
                         <i class="fas fa-map-marker-alt"></i>
-                        <h3>Location</h3>
-                        <p>Isla del Sol (Island of the Sun)<br>
-                        Lake Titicaca, Bolivia<br>
-                        Altitude: 3,812m (12,507 ft)</p>
+                        <h3 data-en="Location" data-es="Ubicación">Location</h3>
+                        <div class="card-text">
+                            <p>Isla del Sol, Comunidad Yumani</p>
+                            <p>Comunidad Yumani</p>
+                            <p data-en="Lake Titicaca, Bolivia" data-es="Lago Titicaca, Bolivia">Lake Titicaca, Bolivia</p>
+                            <p data-en="Altitude: 3,812m (12,507 ft)" data-es="Altitud: 3,812m (12,507 pies)">Altitude: 3,812m (12,507 ft)</p>
+                        </div>
                     </div>
                     <div class="contact-card">
                         <i class="fas fa-phone"></i>
-                        <h3>Phone</h3>
-                        <p>+591 71944013<br>
-                        WhatsApp: +591 71944013</p>
+                        <h3 data-en="Phone" data-es="Teléfono">Phone</h3>
+                        <div class="card-text">
+                            <p>+591 71944013</p>
+                            <a href="https://wa.me/59171944013?text=Hello! I'm interested in staying at Puma Punku Eco Lodge on Isla del Sol. Could you please provide me with availability and rates?" class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span data-en="WhatsApp Us" data-es="Escríbenos">WhatsApp Us</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>info@pumapunkuecolodge.com<br>
-                        reservations@pumapunkuecolodge.com</p>
+                        <i class="fas fa-share-alt"></i>
+                        <h3 data-en="Follow Us" data-es="Síguenos">Follow Us</h3>
+                        <div class="card-text">
+                            <p data-en="Connect with us on social media" data-es="Conéctate con nosotros en redes sociales">Connect with us on social media</p>
+                            <div class="social-media-links">
+                                <a href="https://www.facebook.com/Puma.Punku.Isla.del.Sol/" target="_blank" class="social-link facebook">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="https://www.tiktok.com/@pumapunkuecolodge" target="_blank" class="social-link tiktok">
+                                    <i class="fab fa-tiktok"></i>
+                                    <span>TikTok</span>
+                                </a>
+                                <a href="https://www.tripadvisor.com/Hotel_Review-g303187-d5790776-Reviews-Puma_Punku_Ecolodge_Hotel-Isla_del_Sol_La_Paz_Department.html#/media/5790776/?albumid=106&type=0&category=106" target="_blank" class="social-link tripadvisor">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <span>TripAdvisor</span>
+                                </a>
+                                <a href="https://maps.app.goo.gl/ev3Cf9UgXaGApwBe7" target="_blank" class="social-link google">
+                                    <i class="fab fa-google"></i>
+                                    <span>Google</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="contact-card">
                         <i class="fas fa-ship"></i>
-                        <h3>How to Get Here</h3>
-                        <p>Take a boat from Copacabana to Isla del Sol. We'll provide detailed directions upon booking.</p>
+                        <h3 data-en="How to Get Here" data-es="Cómo Llegar">How to Get Here</h3>
+                        <div class="card-text">
+                            <p data-en="Take a boat from Copacabana to Isla del Sol. We'll provide detailed directions upon booking." data-es="Toma un bote desde Copacabana hacia la Isla del Sol. Te proporcionaremos direcciones detalladas al hacer la reserva.">Take a boat from Copacabana to Isla del Sol. We'll provide detailed directions upon booking.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="map-container">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map"></i>
-                        <p>Interactive Map Coming Soon</p>
+                <div class="map-and-image-container">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15698.2!2d-69.1746!3d-16.0275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f0a4b8b4b8b4b%3A0x0!2sWVX5%2B963%2C%20Isla%20del%20sol%2C%20Comunidad%20Yumani!5e0!3m2!1sen!2sus!4v1722358800000!5m2!1sen!2sus&z=12" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Puma Punku Eco Lodge Location - WVX5+963, Isla del sol, Comunidad Yumani">
+                        </iframe>
+                    </div>
+                    <div class="aerial-image-container">
+                        <img src="images/Aerial Shot from Drone.jpeg" alt="Aerial view of Puma Punku Eco Lodge on Isla del Sol" class="aerial-image">
+                        <div class="image-overlay">
+                            <h4 data-en="Aerial View of Our Lodge" data-es="Vista Aérea de Nuestro Lodge">Aerial View of Our Lodge</h4>
+                            <p data-en="Stunning drone perspective of Puma Punku Eco Lodge nestled on the shores of Lake Titicaca" data-es="Impresionante perspectiva aérea de Puma Punku Eco Lodge ubicado en las orillas del Lago Titicaca">Stunning drone perspective of Puma Punku Eco Lodge nestled on the shores of Lake Titicaca</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -311,45 +527,43 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <img src="images/logo.png" alt="Puma Punku Eco Lodge" class="footer-logo-img">
-                        <h3>Puma Punku Eco Lodge</h3>
                     </div>
-                    <p>Experience authentic Bolivia on the mystical Isla del Sol. Sustainable tourism, traditional cuisine, and unforgettable memories await.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
-                        <a href="#"><i class="fab fa-google"></i></a>
-                    </div>
+                    <p data-en="Experience authentic Bolivia on the mystical Isla del Sol. Sustainable tourism, traditional cuisine, and unforgettable memories await." data-es="Experimenta la auténtica Bolivia en la mística Isla del Sol. Turismo sostenible, cocina tradicional y recuerdos inolvidables te esperan.">Experience authentic Bolivia on the mystical Isla del Sol. Sustainable tourism, traditional cuisine, and unforgettable memories await.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h4>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#accommodations">Rooms</a></li>
-                        <li><a href="#tours">Tours</a></li>
-                        <li><a href="#restaurant">Restaurant</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
+                        <li><a href="#accommodations" data-en="Rooms" data-es="Habitaciones">Rooms</a></li>
+                        <li><a href="#tours" data-en="Tours" data-es="Tours">Tours</a></li>
+                        <li><a href="#restaurant" data-en="Restaurant" data-es="Restaurante">Restaurant</a></li>
+                        <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Services</h4>
+                    <h4 data-en="Services" data-es="Servicios">Services</h4>
                     <ul>
-                        <li>Comfortable Lodging</li>
-                        <li>Guided Tours</li>
-                        <li>Traditional Cuisine</li>
-                        <li>Cultural Experiences</li>
-                        <li>Transportation Assistance</li>
+                        <li data-en="Comfortable Lodging" data-es="Alojamiento Cómodo">Comfortable Lodging</li>
+                        <li data-en="Guided Tours" data-es="Tours Guiados">Guided Tours</li>
+                        <li data-en="Traditional Cuisine" data-es="Cocina Tradicional">Traditional Cuisine</li>
+                        <li data-en="Cultural Experiences" data-es="Experiencias Culturales">Cultural Experiences</li>
+                        <li data-en="Transportation Assistance" data-es="Asistencia de Transporte">Transportation Assistance</li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Isla del Sol, Lake Titicaca, Bolivia</p>
+                    <h4 data-en="Contact Info" data-es="Información de Contacto">Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-en="Isla del Sol, Lake Titicaca, Bolivia" data-es="Isla del Sol, Lago Titicaca, Bolivia">Isla del Sol, Lake Titicaca, Bolivia</span></p>
                     <p><i class="fas fa-phone"></i> +591 71944013</p>
-                    <p><i class="fas fa-envelope"></i> info@pumapunkuecolodge.com</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Puma.Punku.Isla.del.Sol/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@pumapunkuecolodge" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.tripadvisor.com/Hotel_Review-g303187-d5790776-Reviews-Puma_Punku_Ecolodge_Hotel-Isla_del_Sol_La_Paz_Department.html#/media/5790776/?albumid=106&type=0&category=106" target="_blank"><i class="fas fa-map-marked-alt"></i></a>
+                        <a href="https://maps.app.goo.gl/ev3Cf9UgXaGApwBe7" target="_blank"><i class="fab fa-google"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Puma Punku Eco Lodge. All rights reserved. | Sustainable tourism on Lake Titicaca</p>
+                <p data-en="&copy; 2025 Puma Punku Eco Lodge. All rights reserved. | Sustainable tourism on Lake Titicaca" data-es="&copy; 2025 Puma Punku Eco Lodge. Todos los derechos reservados. | Turismo sostenible en el Lago Titicaca">&copy; 2025 Puma Punku Eco Lodge. All rights reserved. | Sustainable tourism on Lake Titicaca</p>
             </div>
         </div>
     </footer>
